@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="icon" href="./public/logo.ico" />
+
+    <!-- Own Styles -->
+    <link rel="stylesheet" href="src/app.css" />
+  </head>
+  <body>
+    <app-bar>
+      <note-search placeholder-text="Search"></note-search>
+    </app-bar>
+    <main>
+      <note-form data-form-type="Add Note"></note-form>
+      <note-list></note-list>
+    </main>
+
+    <!-- Own Script -->
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="src/main.js" type="module"></script>
+  </body>
+</html>
