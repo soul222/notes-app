@@ -14,7 +14,14 @@ class NoteItem extends HTMLElement {
   render() {
     const note = this.noteData;
     const createdAt = new Date(note.createdAt).toLocaleString();
-
+    /* 
+    Dibawah ini CSS masih ditulis langsung di dalam custom 
+    element, yang bisa membuat kode sulit dikelola. 
+    Perlu dipindahkan styling ke berkas CSS terpisah dan 
+    impor ke dalam custom element menggunakan Shadow DOM dengan 
+    adoptedStyleSheets atau metode lain yang sesuai.
+    Dengan cara ini, kode akan lebih rapi dan lebih mudah untuk diperbarui.
+    */
     this.shadowRoot.innerHTML = `
       <style>
         @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
