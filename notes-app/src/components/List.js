@@ -1,3 +1,11 @@
+/* 
+Kode yang kamu tulis terlihat terlalu panjang
+dalam satu file. Ada baiknya kamu memisahkannya 
+ke beberapa berkas sesuai fungsi atau logikanya. Dengan 
+struktur ini, project akan lebih rapi, mudah dipahami, dan 
+memudahkan proses debugging
+*/
+
 import NoteStorage from '../utils/Storage.js';
 
 class NoteList extends HTMLElement {
