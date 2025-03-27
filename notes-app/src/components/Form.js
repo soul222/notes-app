@@ -1,3 +1,10 @@
+/* 
+Kode yang dibawah ini terlihat terlalu panjang
+dalam satu file.Pisahakan ke beberapa berkas sesuai 
+fungsi atau logikanya. Dengan struktur ini, project akan 
+lebih rapi, mudah dipahami, dan memudahkan proses debugging
+*/
+
 import NoteStorage from "../utils/Storage.js";
 
 class NoteForm extends HTMLElement {
@@ -95,7 +102,14 @@ class NoteForm extends HTMLElement {
 
   render() {
     const formType = this.getAttribute("data-form-type") || "Add Note";
-
+    /* 
+    Dibawah ini CSS masih ditulis langsung di dalam custom 
+    element, yang bisa membuat kode sulit dikelola. 
+    Perlu dipindahkan styling ke berkas CSS terpisah dan 
+    impor ke dalam custom element menggunakan Shadow DOM dengan 
+    adoptedStyleSheets atau metode lain yang sesuai.
+    Dengan cara ini, kode akan lebih rapi dan lebih mudah untuk diperbarui.
+    */
     this.shadowRoot.innerHTML = `
       <style>
     form {
